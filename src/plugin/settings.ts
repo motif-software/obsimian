@@ -3,13 +3,17 @@ import { App, Plugin, PluginSettingTab, Setting } from "obsidian";
 /** Settings that configure the Obsimian plugin. */
 export interface ObsimianExportPluginSettings {
   /**
+   * The directory to write export data into.
+   *
+   * Relative paths are resolved relative to the vault directory.
+   */
+  outDir: string;
+
+  /**
    * If true, split the Obsimian data into a separate file per component. Otherwise aggregate all
    * data into a single file.
    */
   splitData: boolean;
-
-  /** The directory to write export data into. */
-  outDir: string;
 }
 
 /** An Obsidian Plugin that has Obsimian settings. */
@@ -42,7 +46,9 @@ export class ObsimianExportPluginSettingsTab extends PluginSettingTab {
 
     new Setting(containerEl)
       .setName("Export directory")
-      .setDesc("The directory to write export data into")
+      .setDesc(
+        "The directory to write export data into. Relative paths are resolved relative to the vault directory."
+      )
       .addText((text) => {
         text.inputEl.style.width = "100%";
         text

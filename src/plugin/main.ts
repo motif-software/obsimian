@@ -7,6 +7,11 @@ import {
   ObsimianExportPluginSettingsTab,
 } from "./settings";
 
+const DEFAULT_SETTINGS: ObsimianExportPluginSettings = {
+  outDir: ".",
+  splitData: false,
+};
+
 /** Provides an "Export data" command to dump an Obsimian-compatible data file. */
 export default class ObsimianExportPlugin extends Plugin {
   settings: ObsimianExportPluginSettings;
@@ -22,7 +27,7 @@ export default class ObsimianExportPlugin extends Plugin {
       callback: () => {
         exportData(
           this,
-          path.join(this.settings.outDir, this.app.vault.getName() + ".json")
+          path.join(this.resolveOutDir(), this.app.vault.getName() + ".json")
         );
       },
     });
@@ -31,11 +36,15 @@ export default class ObsimianExportPlugin extends Plugin {
   }
 
   async loadSettings() {
-    const defaults: ObsimianExportPluginSettings = {
-      splitData: false,
-      outDir: this.basePath(),
-    };
-    this.settings = Object.assign({}, defaults, await this.loadData());
+    this.settings = Object.assign({}, DEFAULT_SETTINGS, await this.loadData());
+  }
+
+  resolveOutDir(): string {
+    let dir = this.settings.outDir;
+    if (dir[0] === "~") {
+      dir = process.env.HOME + dir.substr(1);
+    }
+    return path.resolve(this.basePath(), dir);
   }
 
   /** Returns the path to the vault. */
