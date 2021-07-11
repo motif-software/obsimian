@@ -1,6 +1,9 @@
 # Plugin build
 main.js
 
+# Plugin configuration
+/data.json
+
 # Logs
 logs
 *.log
