@@ -6,14 +6,14 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "dev": "rollup --config rollup.config.js -w",
-    "tidy": "prettier --write .",
+    "tidy": "prettier --write src ./*.{js,json,md}",
     "prepublish": "tsc",
     "build": "rollup --config rollup.config.js --environment BUILD:production"
   },
   "keywords": [
     "testing"
   ],
-  "author": "",
+  "author": "Oliver Lade <piemaster21@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^18.0.0",
