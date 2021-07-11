@@ -1,0 +1,838 @@
+{
+  "plugin.app.vault.getMarkdownFiles()": [
+    {
+      "stat": {
+        "ctime": 1625879055353,
+        "mtime": 1625879055353,
+        "size": 0
+      },
+      "basename": "Untitled",
+      "extension": "md",
+      "path": "Untitled.md",
+      "name": "Untitled.md",
+      "parent": {
+        "path": "/",
+        "name": ""
+      }
+    },
+    {
+      "stat": {
+        "ctime": 1625878934222,
+        "mtime": 1625894697748,
+        "size": 384
+      },
+      "basename": "Structure",
+      "extension": "md",
+      "path": "Structure.md",
+      "name": "Structure.md",
+      "parent": {
+        "path": "/",
+        "name": ""
+      }
+    },
+    {
+      "stat": {
+        "ctime": 1625879153954,
+        "mtime": 1625879184676,
+        "size": 14
+      },
+      "basename": "Page Simple",
+      "extension": "md",
+      "path": "Page Simple.md",
+      "name": "Page Simple.md",
+      "parent": {
+        "path": "/",
+        "name": ""
+      }
+    },
+    {
+      "stat": {
+        "ctime": 1625879157748,
+        "mtime": 1625879157748,
+        "size": 0
+      },
+      "basename": "Page 2",
+      "extension": "md",
+      "path": "Page 2.md",
+      "name": "Page 2.md",
+      "parent": {
+        "path": "/",
+        "name": ""
+      }
+    },
+    {
+      "stat": {
+        "ctime": 1625879003789,
+        "mtime": 1625879053629,
+        "size": 50
+      },
+      "basename": "Docs Landing Page",
+      "extension": "md",
+      "path": "Docs Landing Page.md",
+      "name": "Docs Landing Page.md",
+      "parent": {
+        "path": "/",
+        "name": ""
+      }
+    },
+    {
+      "stat": {
+        "ctime": 1625879158598,
+        "mtime": 1625879168047,
+        "size": 19
+      },
+      "basename": "Blog Simple",
+      "extension": "md",
+      "path": "Blog Simple.md",
+      "name": "Blog Simple.md",
+      "parent": {
+        "path": "/",
+        "name": ""
+      }
+    }
+  ],
+  "plugin.app.vault.read(*)": {
+    "Untitled.md": "",
+    "Structure.md": "dudump\n\n#docusaurus/test/_\n\n## Pages\n\n- [[Page Simple]]\n- [[Page 2]]\n\n## Blog\n\n- [[Blog Simple]]\n\n## Navbar\n\n- [[Docs Landing Page|My Docs]]\n- Menu\n  - [[Docs Landing Page]]\n  - [[Docs Landing Page|Label]]\n\n## Sidebars\n\n- Sidebar name\n  - [[Page Simple]]\n  - [[Page Simple|Page Simple with label]]\n  - Category label\n    - [[Page Simple]]\n    - [[Page Simple|Page Simple with label]]\n",
+    "Page Simple.md": "Simplest page.",
+    "Page 2.md": "",
+    "Docs Landing Page.md": "This is the landing page for the Docs navbar link.",
+    "Blog Simple.md": "Simplest blog post."
+  },
+  "plugin.app.metadataCache.getCache(*)": {
+    "Untitled.md": {},
+    "Structure.md": {
+      "links": [
+        {
+          "link": "Page Simple",
+          "original": "[[Page Simple]]",
+          "displayText": "Page Simple",
+          "position": {
+            "start": {
+              "line": 6,
+              "col": 2,
+              "offset": 40
+            },
+            "end": {
+              "line": 6,
+              "col": 17,
+              "offset": 55
+            }
+          }
+        },
+        {
+          "link": "Page 2",
+          "original": "[[Page 2]]",
+          "displayText": "Page 2",
+          "position": {
+            "start": {
+              "line": 7,
+              "col": 2,
+              "offset": 58
+            },
+            "end": {
+              "line": 7,
+              "col": 12,
+              "offset": 68
+            }
+          }
+        },
+        {
+          "link": "Blog Simple",
+          "original": "[[Blog Simple]]",
+          "displayText": "Blog Simple",
+          "position": {
+            "start": {
+              "line": 11,
+              "col": 2,
+              "offset": 81
+            },
+            "end": {
+              "line": 11,
+              "col": 17,
+              "offset": 96
+            }
+          }
+        },
+        {
+          "link": "Docs Landing Page",
+          "original": "[[Docs Landing Page|My Docs]]",
+          "displayText": "My Docs",
+          "position": {
+            "start": {
+              "line": 15,
+              "col": 2,
+              "offset": 111
+            },
+            "end": {
+              "line": 15,
+              "col": 31,
+              "offset": 140
+            }
+          }
+        },
+        {
+          "link": "Docs Landing Page",
+          "original": "[[Docs Landing Page]]",
+          "displayText": "Docs Landing Page",
+          "position": {
+            "start": {
+              "line": 17,
+              "col": 4,
+              "offset": 152
+            },
+            "end": {
+              "line": 17,
+              "col": 25,
+              "offset": 173
+            }
+          }
+        },
+        {
+          "link": "Docs Landing Page",
+          "original": "[[Docs Landing Page|Label]]",
+          "displayText": "Label",
+          "position": {
+            "start": {
+              "line": 18,
+              "col": 4,
+              "offset": 178
+            },
+            "end": {
+              "line": 18,
+              "col": 31,
+              "offset": 205
+            }
+          }
+        },
+        {
+          "link": "Page Simple",
+          "original": "[[Page Simple]]",
+          "displayText": "Page Simple",
+          "position": {
+            "start": {
+              "line": 23,
+              "col": 4,
+              "offset": 239
+            },
+            "end": {
+              "line": 23,
+              "col": 19,
+              "offset": 254
+            }
+          }
+        },
+        {
+          "link": "Page Simple",
+          "original": "[[Page Simple|Page Simple with label]]",
+          "displayText": "Page Simple with label",
+          "position": {
+            "start": {
+              "line": 24,
+              "col": 4,
+              "offset": 259
+            },
+            "end": {
+              "line": 24,
+              "col": 42,
+              "offset": 297
+            }
+          }
+        },
+        {
+          "link": "Page Simple",
+          "original": "[[Page Simple]]",
+          "displayText": "Page Simple",
+          "position": {
+            "start": {
+              "line": 26,
+              "col": 6,
+              "offset": 323
+            },
+            "end": {
+              "line": 26,
+              "col": 21,
+              "offset": 338
+            }
+          }
+        },
+        {
+          "link": "Page Simple",
+          "original": "[[Page Simple|Page Simple with label]]",
+          "displayText": "Page Simple with label",
+          "position": {
+            "start": {
+              "line": 27,
+              "col": 6,
+              "offset": 345
+            },
+            "end": {
+              "line": 27,
+              "col": 44,
+              "offset": 383
+            }
+          }
+        }
+      ],
+      "tags": [
+        {
+          "tag": "#docusaurus/test/_",
+          "position": {
+            "start": {
+              "line": 2,
+              "col": 0,
+              "offset": 8
+            },
+            "end": {
+              "line": 2,
+              "col": 18,
+              "offset": 26
+            }
+          }
+        }
+      ],
+      "headings": [
+        {
+          "heading": "Pages",
+          "level": 2,
+          "position": {
+            "start": {
+              "line": 4,
+              "col": 0,
+              "offset": 28
+            },
+            "end": {
+              "line": 4,
+              "col": 8,
+              "offset": 36
+            }
+          }
+        },
+        {
+          "heading": "Blog",
+          "level": 2,
+          "position": {
+            "start": {
+              "line": 9,
+              "col": 0,
+              "offset": 70
+            },
+            "end": {
+              "line": 9,
+              "col": 7,
+              "offset": 77
+            }
+          }
+        },
+        {
+          "heading": "Navbar",
+          "level": 2,
+          "position": {
+            "start": {
+              "line": 13,
+              "col": 0,
+              "offset": 98
+            },
+            "end": {
+              "line": 13,
+              "col": 9,
+              "offset": 107
+            }
+          }
+        },
+        {
+          "heading": "Sidebars",
+          "level": 2,
+          "position": {
+            "start": {
+              "line": 20,
+              "col": 0,
+              "offset": 207
+            },
+            "end": {
+              "line": 20,
+              "col": 11,
+              "offset": 218
+            }
+          }
+        }
+      ],
+      "sections": [
+        {
+          "type": "paragraph",
+          "position": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "col": 6,
+              "offset": 6
+            }
+          }
+        },
+        {
+          "type": "paragraph",
+          "position": {
+            "start": {
+              "line": 2,
+              "col": 0,
+              "offset": 8
+            },
+            "end": {
+              "line": 2,
+              "col": 18,
+              "offset": 26
+            }
+          }
+        },
+        {
+          "type": "heading",
+          "position": {
+            "start": {
+              "line": 4,
+              "col": 0,
+              "offset": 28
+            },
+            "end": {
+              "line": 4,
+              "col": 8,
+              "offset": 36
+            }
+          }
+        },
+        {
+          "type": "list",
+          "position": {
+            "start": {
+              "line": 6,
+              "col": 0,
+              "offset": 38
+            },
+            "end": {
+              "line": 7,
+              "col": 12,
+              "offset": 68
+            }
+          }
+        },
+        {
+          "type": "heading",
+          "position": {
+            "start": {
+              "line": 9,
+              "col": 0,
+              "offset": 70
+            },
+            "end": {
+              "line": 9,
+              "col": 7,
+              "offset": 77
+            }
+          }
+        },
+        {
+          "type": "list",
+          "position": {
+            "start": {
+              "line": 11,
+              "col": 0,
+              "offset": 79
+            },
+            "end": {
+              "line": 11,
+              "col": 17,
+              "offset": 96
+            }
+          }
+        },
+        {
+          "type": "heading",
+          "position": {
+            "start": {
+              "line": 13,
+              "col": 0,
+              "offset": 98
+            },
+            "end": {
+              "line": 13,
+              "col": 9,
+              "offset": 107
+            }
+          }
+        },
+        {
+          "type": "list",
+          "position": {
+            "start": {
+              "line": 15,
+              "col": 0,
+              "offset": 109
+            },
+            "end": {
+              "line": 18,
+              "col": 31,
+              "offset": 205
+            }
+          }
+        },
+        {
+          "type": "heading",
+          "position": {
+            "start": {
+              "line": 20,
+              "col": 0,
+              "offset": 207
+            },
+            "end": {
+              "line": 20,
+              "col": 11,
+              "offset": 218
+            }
+          }
+        },
+        {
+          "type": "list",
+          "position": {
+            "start": {
+              "line": 22,
+              "col": 0,
+              "offset": 220
+            },
+            "end": {
+              "line": 27,
+              "col": 44,
+              "offset": 383
+            }
+          }
+        }
+      ],
+      "listItems": [
+        {
+          "parent": -6,
+          "position": {
+            "start": {
+              "line": 6,
+              "col": 0,
+              "offset": 38
+            },
+            "end": {
+              "line": 6,
+              "col": 17,
+              "offset": 55
+            }
+          }
+        },
+        {
+          "parent": -6,
+          "position": {
+            "start": {
+              "line": 7,
+              "col": 0,
+              "offset": 56
+            },
+            "end": {
+              "line": 7,
+              "col": 12,
+              "offset": 68
+            }
+          }
+        },
+        {
+          "parent": -11,
+          "position": {
+            "start": {
+              "line": 11,
+              "col": 0,
+              "offset": 79
+            },
+            "end": {
+              "line": 11,
+              "col": 17,
+              "offset": 96
+            }
+          }
+        },
+        {
+          "parent": -15,
+          "position": {
+            "start": {
+              "line": 15,
+              "col": 0,
+              "offset": 109
+            },
+            "end": {
+              "line": 15,
+              "col": 31,
+              "offset": 140
+            }
+          }
+        },
+        {
+          "parent": -15,
+          "position": {
+            "start": {
+              "line": 16,
+              "col": 0,
+              "offset": 141
+            },
+            "end": {
+              "line": 16,
+              "col": 6,
+              "offset": 147
+            }
+          }
+        },
+        {
+          "parent": 16,
+          "position": {
+            "start": {
+              "line": 17,
+              "col": 2,
+              "offset": 150
+            },
+            "end": {
+              "line": 17,
+              "col": 25,
+              "offset": 173
+            }
+          }
+        },
+        {
+          "parent": 16,
+          "position": {
+            "start": {
+              "line": 18,
+              "col": 2,
+              "offset": 176
+            },
+            "end": {
+              "line": 18,
+              "col": 31,
+              "offset": 205
+            }
+          }
+        },
+        {
+          "parent": -22,
+          "position": {
+            "start": {
+              "line": 22,
+              "col": 0,
+              "offset": 220
+            },
+            "end": {
+              "line": 22,
+              "col": 14,
+              "offset": 234
+            }
+          }
+        },
+        {
+          "parent": 22,
+          "position": {
+            "start": {
+              "line": 23,
+              "col": 2,
+              "offset": 237
+            },
+            "end": {
+              "line": 23,
+              "col": 19,
+              "offset": 254
+            }
+          }
+        },
+        {
+          "parent": 22,
+          "position": {
+            "start": {
+              "line": 24,
+              "col": 2,
+              "offset": 257
+            },
+            "end": {
+              "line": 24,
+              "col": 42,
+              "offset": 297
+            }
+          }
+        },
+        {
+          "parent": 22,
+          "position": {
+            "start": {
+              "line": 25,
+              "col": 2,
+              "offset": 300
+            },
+            "end": {
+              "line": 25,
+              "col": 18,
+              "offset": 316
+            }
+          }
+        },
+        {
+          "parent": 25,
+          "position": {
+            "start": {
+              "line": 26,
+              "col": 4,
+              "offset": 321
+            },
+            "end": {
+              "line": 26,
+              "col": 21,
+              "offset": 338
+            }
+          }
+        },
+        {
+          "parent": 25,
+          "position": {
+            "start": {
+              "line": 27,
+              "col": 4,
+              "offset": 343
+            },
+            "end": {
+              "line": 27,
+              "col": 44,
+              "offset": 383
+            }
+          }
+        }
+      ]
+    },
+    "Page Simple.md": {
+      "sections": [
+        {
+          "type": "paragraph",
+          "position": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "col": 14,
+              "offset": 14
+            }
+          }
+        }
+      ]
+    },
+    "Page 2.md": {},
+    "Docs Landing Page.md": {
+      "sections": [
+        {
+          "type": "paragraph",
+          "position": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "col": 50,
+              "offset": 50
+            }
+          }
+        }
+      ]
+    },
+    "Blog Simple.md": {
+      "sections": [
+        {
+          "type": "paragraph",
+          "position": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "col": 19,
+              "offset": 19
+            }
+          }
+        }
+      ]
+    }
+  },
+  "plugin.app.metadataCache.getFirstLinkpathDest(*)": {
+    "Untitled.md": {},
+    "Structure.md": {
+      "Page Simple": {
+        "stat": {
+          "ctime": 1625879153954,
+          "mtime": 1625879184676,
+          "size": 14
+        },
+        "basename": "Page Simple",
+        "extension": "md",
+        "path": "Page Simple.md",
+        "name": "Page Simple.md",
+        "parent": {
+          "path": "/",
+          "name": ""
+        }
+      },
+      "Page 2": {
+        "stat": {
+          "ctime": 1625879157748,
+          "mtime": 1625879157748,
+          "size": 0
+        },
+        "basename": "Page 2",
+        "extension": "md",
+        "path": "Page 2.md",
+        "name": "Page 2.md",
+        "parent": {
+          "path": "/",
+          "name": ""
+        }
+      },
+      "Blog Simple": {
+        "stat": {
+          "ctime": 1625879158598,
+          "mtime": 1625879168047,
+          "size": 19
+        },
+        "basename": "Blog Simple",
+        "extension": "md",
+        "path": "Blog Simple.md",
+        "name": "Blog Simple.md",
+        "parent": {
+          "path": "/",
+          "name": ""
+        }
+      },
+      "Docs Landing Page": {
+        "stat": {
+          "ctime": 1625879003789,
+          "mtime": 1625879053629,
+          "size": 50
+        },
+        "basename": "Docs Landing Page",
+        "extension": "md",
+        "path": "Docs Landing Page.md",
+        "name": "Docs Landing Page.md",
+        "parent": {
+          "path": "/",
+          "name": ""
+        }
+      }
+    },
+    "Page Simple.md": {},
+    "Page 2.md": {},
+    "Docs Landing Page.md": {},
+    "Blog Simple.md": {}
+  }
+}

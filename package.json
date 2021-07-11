@@ -1,0 +1,39 @@
+{
+  "name": "obsimian",
+  "version": "0.1.0",
+  "description": "Obsidian simulation framework for testing Obsidian plugins.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "dev": "rollup --config rollup.config.js -w",
+    "tidy": "prettier --write .",
+    "prepublish": "tsc",
+    "build": "rollup --config rollup.config.js --environment BUILD:production"
+  },
+  "keywords": [
+    "testing"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^18.0.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^11.2.1",
+    "@rollup/plugin-typescript": "^8.2.1",
+    "@types/fs-extra": "^9.0.11",
+    "@types/jest": "^26.0.24",
+    "@types/node": "^14.14.37",
+    "jest": "^27.0.6",
+    "obsidian": "^0.12.0",
+    "prettier": "^2.3.2",
+    "rollup": "^2.32.1",
+    "ts-jest": "^27.0.3",
+    "tslib": "^2.2.0",
+    "typescript": "^4.2.4"
+  },
+  "dependencies": {
+    "@types/lodash": "^4.14.170",
+    "fs-extra": "^10.0.0",
+    "lodash": "^4.17.21"
+  }
+}
