@@ -8,9 +8,7 @@ describe("ObsimianMetadataCache", () => {
   describe("getCache", () => {
     it("can read metadata", () => {
       const data = cache.getCache("Simple.md");
-      expect(data).toEqual(
-        testData["metadataCache.getCache(*)"]["Simple.md"]
-      );
+      expect(data).toEqual(testData["metadataCache.getCache(*)"]["Simple.md"]);
       expect(data.sections[0].position.start).toEqual({
         line: 0,
         col: 0,
