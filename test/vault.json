@@ -1,0 +1,1017 @@
+{
+  "plugin.app.vault.getMarkdownFiles()": [
+    {
+      "stat": {
+        "ctime": 1625973235399,
+        "mtime": 1625973248682,
+        "size": 17
+      },
+      "basename": "Tags",
+      "extension": "md",
+      "path": "Tags.md",
+      "name": "Tags.md",
+      "parent": {
+        "path": "/",
+        "name": ""
+      }
+    },
+    {
+      "stat": {
+        "ctime": 1625967748431,
+        "mtime": 1625972301310,
+        "size": 27
+      },
+      "basename": "Simple",
+      "extension": "md",
+      "path": "Simple.md",
+      "name": "Simple.md",
+      "parent": {
+        "path": "/",
+        "name": ""
+      }
+    },
+    {
+      "stat": {
+        "ctime": 1625972267015,
+        "mtime": 1625972411224,
+        "size": 344
+      },
+      "basename": "Lists",
+      "extension": "md",
+      "path": "Lists.md",
+      "name": "Lists.md",
+      "parent": {
+        "path": "/",
+        "name": ""
+      }
+    },
+    {
+      "stat": {
+        "ctime": 1625972431892,
+        "mtime": 1625973169363,
+        "size": 381
+      },
+      "basename": "Links",
+      "extension": "md",
+      "path": "Links.md",
+      "name": "Links.md",
+      "parent": {
+        "path": "/",
+        "name": ""
+      }
+    },
+    {
+      "stat": {
+        "ctime": 1625973267110,
+        "mtime": 1625973292638,
+        "size": 74
+      },
+      "basename": "Headings",
+      "extension": "md",
+      "path": "Headings.md",
+      "name": "Headings.md",
+      "parent": {
+        "path": "/",
+        "name": ""
+      }
+    },
+    {
+      "stat": {
+        "ctime": 1625972173141,
+        "mtime": 1625972220801,
+        "size": 16
+      },
+      "basename": "Folder Note",
+      "extension": "md",
+      "path": "Folder/Folder Note.md",
+      "name": "Folder Note.md",
+      "parent": {
+        "path": "Folder",
+        "name": "Folder",
+        "parent": {
+          "path": "/",
+          "name": ""
+        }
+      }
+    },
+    {
+      "stat": {
+        "ctime": 1625972152187,
+        "mtime": 1625972222131,
+        "size": 29
+      },
+      "basename": "Child Folder Note",
+      "extension": "md",
+      "path": "Folder/Child Folder/Child Folder Note.md",
+      "name": "Child Folder Note.md",
+      "parent": {
+        "path": "Folder/Child Folder",
+        "name": "Child Folder",
+        "parent": {
+          "path": "Folder",
+          "name": "Folder",
+          "parent": {
+            "path": "/",
+            "name": ""
+          }
+        }
+      }
+    },
+    {
+      "stat": {
+        "ctime": 1625973174205,
+        "mtime": 1625973224238,
+        "size": 94
+      },
+      "basename": "Embeds",
+      "extension": "md",
+      "path": "Embeds.md",
+      "name": "Embeds.md",
+      "parent": {
+        "path": "/",
+        "name": ""
+      }
+    }
+  ],
+  "plugin.app.metadataCache.getCache(*)": {
+    "Tags.md": {
+      "tags": [
+        {
+          "tag": "#tag",
+          "position": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "col": 4,
+              "offset": 4
+            }
+          }
+        },
+        {
+          "tag": "#nested/tag",
+          "position": {
+            "start": {
+              "line": 2,
+              "col": 0,
+              "offset": 6
+            },
+            "end": {
+              "line": 2,
+              "col": 11,
+              "offset": 17
+            }
+          }
+        }
+      ],
+      "sections": [
+        {
+          "type": "paragraph",
+          "position": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "col": 4,
+              "offset": 4
+            }
+          }
+        },
+        {
+          "type": "paragraph",
+          "position": {
+            "start": {
+              "line": 2,
+              "col": 0,
+              "offset": 6
+            },
+            "end": {
+              "line": 2,
+              "col": 11,
+              "offset": 17
+            }
+          }
+        }
+      ]
+    },
+    "Simple.md": {
+      "sections": [
+        {
+          "type": "paragraph",
+          "position": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "col": 27,
+              "offset": 27
+            }
+          }
+        }
+      ]
+    },
+    "Lists.md": {
+      "sections": [
+        {
+          "type": "paragraph",
+          "position": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "col": 25,
+              "offset": 25
+            }
+          }
+        },
+        {
+          "type": "list",
+          "position": {
+            "start": {
+              "line": 2,
+              "col": 0,
+              "offset": 27
+            },
+            "end": {
+              "line": 4,
+              "col": 17,
+              "offset": 98
+            }
+          }
+        },
+        {
+          "type": "list",
+          "position": {
+            "start": {
+              "line": 6,
+              "col": 0,
+              "offset": 100
+            },
+            "end": {
+              "line": 8,
+              "col": 23,
+              "offset": 177
+            }
+          }
+        },
+        {
+          "type": "list",
+          "position": {
+            "start": {
+              "line": 10,
+              "col": 0,
+              "offset": 179
+            },
+            "end": {
+              "line": 14,
+              "col": 37,
+              "offset": 344
+            }
+          }
+        }
+      ],
+      "listItems": [
+        {
+          "parent": -2,
+          "position": {
+            "start": {
+              "line": 2,
+              "col": 0,
+              "offset": 27
+            },
+            "end": {
+              "line": 2,
+              "col": 28,
+              "offset": 55
+            }
+          }
+        },
+        {
+          "parent": -2,
+          "position": {
+            "start": {
+              "line": 3,
+              "col": 0,
+              "offset": 56
+            },
+            "end": {
+              "line": 3,
+              "col": 24,
+              "offset": 80
+            }
+          }
+        },
+        {
+          "parent": -2,
+          "position": {
+            "start": {
+              "line": 4,
+              "col": 0,
+              "offset": 81
+            },
+            "end": {
+              "line": 4,
+              "col": 17,
+              "offset": 98
+            }
+          }
+        },
+        {
+          "parent": -6,
+          "position": {
+            "start": {
+              "line": 6,
+              "col": 0,
+              "offset": 100
+            },
+            "end": {
+              "line": 6,
+              "col": 27,
+              "offset": 127
+            }
+          }
+        },
+        {
+          "parent": -6,
+          "position": {
+            "start": {
+              "line": 7,
+              "col": 0,
+              "offset": 128
+            },
+            "end": {
+              "line": 7,
+              "col": 25,
+              "offset": 153
+            }
+          }
+        },
+        {
+          "parent": -6,
+          "position": {
+            "start": {
+              "line": 8,
+              "col": 0,
+              "offset": 154
+            },
+            "end": {
+              "line": 8,
+              "col": 23,
+              "offset": 177
+            }
+          }
+        },
+        {
+          "parent": -10,
+          "position": {
+            "start": {
+              "line": 10,
+              "col": 0,
+              "offset": 179
+            },
+            "end": {
+              "line": 10,
+              "col": 42,
+              "offset": 221
+            }
+          }
+        },
+        {
+          "parent": 10,
+          "position": {
+            "start": {
+              "line": 11,
+              "col": 1,
+              "offset": 223
+            },
+            "end": {
+              "line": 11,
+              "col": 25,
+              "offset": 247
+            }
+          }
+        },
+        {
+          "parent": 11,
+          "position": {
+            "start": {
+              "line": 12,
+              "col": 2,
+              "offset": 250
+            },
+            "end": {
+              "line": 12,
+              "col": 27,
+              "offset": 275
+            }
+          }
+        },
+        {
+          "parent": 10,
+          "position": {
+            "start": {
+              "line": 13,
+              "col": 1,
+              "offset": 277
+            },
+            "end": {
+              "line": 13,
+              "col": 30,
+              "offset": 306
+            }
+          }
+        },
+        {
+          "parent": -10,
+          "position": {
+            "start": {
+              "line": 14,
+              "col": 0,
+              "offset": 307
+            },
+            "end": {
+              "line": 14,
+              "col": 37,
+              "offset": 344
+            }
+          }
+        }
+      ]
+    },
+    "Links.md": {
+      "links": [
+        {
+          "link": "Simple",
+          "original": "[[Simple]]",
+          "displayText": "Simple",
+          "position": {
+            "start": {
+              "line": 2,
+              "col": 27,
+              "offset": 54
+            },
+            "end": {
+              "line": 2,
+              "col": 37,
+              "offset": 64
+            }
+          }
+        },
+        {
+          "link": "Simple",
+          "original": "[[Simple|Link with display text]]",
+          "displayText": "Link with display text",
+          "position": {
+            "start": {
+              "line": 4,
+              "col": 24,
+              "offset": 90
+            },
+            "end": {
+              "line": 4,
+              "col": 57,
+              "offset": 123
+            }
+          }
+        },
+        {
+          "link": "Folder Note",
+          "original": "[[Folder Note]]",
+          "displayText": "Folder Note",
+          "position": {
+            "start": {
+              "line": 6,
+              "col": 28,
+              "offset": 153
+            },
+            "end": {
+              "line": 6,
+              "col": 43,
+              "offset": 168
+            }
+          }
+        },
+        {
+          "link": "Links",
+          "original": "[[Links]]",
+          "displayText": "Links",
+          "position": {
+            "start": {
+              "line": 8,
+              "col": 14,
+              "offset": 184
+            },
+            "end": {
+              "line": 8,
+              "col": 23,
+              "offset": 193
+            }
+          }
+        },
+        {
+          "link": "Simple",
+          "original": "[[Simple]]",
+          "displayText": "Simple",
+          "position": {
+            "start": {
+              "line": 10,
+              "col": 33,
+              "offset": 228
+            },
+            "end": {
+              "line": 10,
+              "col": 43,
+              "offset": 238
+            }
+          }
+        },
+        {
+          "link": "Folder Note",
+          "original": "[[Folder Note]]",
+          "displayText": "Folder Note",
+          "position": {
+            "start": {
+              "line": 10,
+              "col": 45,
+              "offset": 240
+            },
+            "end": {
+              "line": 10,
+              "col": 60,
+              "offset": 255
+            }
+          }
+        },
+        {
+          "link": "Child Folder Note",
+          "original": "[[Child Folder Note]]",
+          "displayText": "Child Folder Note",
+          "position": {
+            "start": {
+              "line": 10,
+              "col": 62,
+              "offset": 257
+            },
+            "end": {
+              "line": 10,
+              "col": 83,
+              "offset": 278
+            }
+          }
+        },
+        {
+          "link": "obsidian-logo.png",
+          "original": "[[obsidian-logo.png]]",
+          "displayText": "obsidian-logo.png",
+          "position": {
+            "start": {
+              "line": 14,
+              "col": 18,
+              "offset": 359
+            },
+            "end": {
+              "line": 14,
+              "col": 39,
+              "offset": 380
+            }
+          }
+        }
+      ],
+      "sections": [
+        {
+          "type": "paragraph",
+          "position": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "col": 25,
+              "offset": 25
+            }
+          }
+        },
+        {
+          "type": "paragraph",
+          "position": {
+            "start": {
+              "line": 2,
+              "col": 0,
+              "offset": 27
+            },
+            "end": {
+              "line": 2,
+              "col": 37,
+              "offset": 64
+            }
+          }
+        },
+        {
+          "type": "paragraph",
+          "position": {
+            "start": {
+              "line": 4,
+              "col": 0,
+              "offset": 66
+            },
+            "end": {
+              "line": 4,
+              "col": 57,
+              "offset": 123
+            }
+          }
+        },
+        {
+          "type": "paragraph",
+          "position": {
+            "start": {
+              "line": 6,
+              "col": 0,
+              "offset": 125
+            },
+            "end": {
+              "line": 6,
+              "col": 43,
+              "offset": 168
+            }
+          }
+        },
+        {
+          "type": "paragraph",
+          "position": {
+            "start": {
+              "line": 8,
+              "col": 0,
+              "offset": 170
+            },
+            "end": {
+              "line": 8,
+              "col": 23,
+              "offset": 193
+            }
+          }
+        },
+        {
+          "type": "paragraph",
+          "position": {
+            "start": {
+              "line": 10,
+              "col": 0,
+              "offset": 195
+            },
+            "end": {
+              "line": 10,
+              "col": 83,
+              "offset": 278
+            }
+          }
+        },
+        {
+          "type": "paragraph",
+          "position": {
+            "start": {
+              "line": 12,
+              "col": 0,
+              "offset": 280
+            },
+            "end": {
+              "line": 12,
+              "col": 59,
+              "offset": 339
+            }
+          }
+        },
+        {
+          "type": "paragraph",
+          "position": {
+            "start": {
+              "line": 14,
+              "col": 0,
+              "offset": 341
+            },
+            "end": {
+              "line": 14,
+              "col": 39,
+              "offset": 380
+            }
+          }
+        }
+      ]
+    },
+    "Headings.md": {
+      "headings": [
+        {
+          "heading": "Heading 1",
+          "level": 1,
+          "position": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "col": 11,
+              "offset": 11
+            }
+          }
+        },
+        {
+          "heading": "Heading 2",
+          "level": 2,
+          "position": {
+            "start": {
+              "line": 2,
+              "col": 0,
+              "offset": 13
+            },
+            "end": {
+              "line": 2,
+              "col": 12,
+              "offset": 25
+            }
+          }
+        },
+        {
+          "heading": "Heading 3",
+          "level": 3,
+          "position": {
+            "start": {
+              "line": 4,
+              "col": 0,
+              "offset": 27
+            },
+            "end": {
+              "line": 4,
+              "col": 13,
+              "offset": 40
+            }
+          }
+        },
+        {
+          "heading": "Heading 4",
+          "level": 4,
+          "position": {
+            "start": {
+              "line": 6,
+              "col": 0,
+              "offset": 42
+            },
+            "end": {
+              "line": 6,
+              "col": 14,
+              "offset": 56
+            }
+          }
+        },
+        {
+          "heading": "Heading 5",
+          "level": 5,
+          "position": {
+            "start": {
+              "line": 8,
+              "col": 0,
+              "offset": 58
+            },
+            "end": {
+              "line": 8,
+              "col": 15,
+              "offset": 73
+            }
+          }
+        }
+      ],
+      "sections": [
+        {
+          "type": "heading",
+          "position": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "col": 11,
+              "offset": 11
+            }
+          }
+        },
+        {
+          "type": "heading",
+          "position": {
+            "start": {
+              "line": 2,
+              "col": 0,
+              "offset": 13
+            },
+            "end": {
+              "line": 2,
+              "col": 12,
+              "offset": 25
+            }
+          }
+        },
+        {
+          "type": "heading",
+          "position": {
+            "start": {
+              "line": 4,
+              "col": 0,
+              "offset": 27
+            },
+            "end": {
+              "line": 4,
+              "col": 13,
+              "offset": 40
+            }
+          }
+        },
+        {
+          "type": "heading",
+          "position": {
+            "start": {
+              "line": 6,
+              "col": 0,
+              "offset": 42
+            },
+            "end": {
+              "line": 6,
+              "col": 14,
+              "offset": 56
+            }
+          }
+        },
+        {
+          "type": "heading",
+          "position": {
+            "start": {
+              "line": 8,
+              "col": 0,
+              "offset": 58
+            },
+            "end": {
+              "line": 8,
+              "col": 15,
+              "offset": 73
+            }
+          }
+        }
+      ]
+    },
+    "Folder/Folder Note.md": {
+      "sections": [
+        {
+          "type": "paragraph",
+          "position": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "col": 16,
+              "offset": 16
+            }
+          }
+        }
+      ]
+    },
+    "Folder/Child Folder/Child Folder Note.md": {
+      "sections": [
+        {
+          "type": "paragraph",
+          "position": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "col": 29,
+              "offset": 29
+            }
+          }
+        }
+      ]
+    },
+    "Embeds.md": {
+      "embeds": [
+        {
+          "link": "Simple",
+          "original": "![[Simple]]",
+          "displayText": "Simple",
+          "position": {
+            "start": {
+              "line": 0,
+              "col": 15,
+              "offset": 15
+            },
+            "end": {
+              "line": 0,
+              "col": 26,
+              "offset": 26
+            }
+          }
+        },
+        {
+          "link": "obsidian-logo.png",
+          "original": "![[obsidian-logo.png]]",
+          "displayText": "obsidian-logo.png",
+          "position": {
+            "start": {
+              "line": 2,
+              "col": 15,
+              "offset": 43
+            },
+            "end": {
+              "line": 2,
+              "col": 37,
+              "offset": 65
+            }
+          }
+        },
+        {
+          "link": "Embeds",
+          "original": "![[Embeds]]",
+          "displayText": "Embeds",
+          "position": {
+            "start": {
+              "line": 4,
+              "col": 16,
+              "offset": 83
+            },
+            "end": {
+              "line": 4,
+              "col": 27,
+              "offset": 94
+            }
+          }
+        }
+      ],
+      "sections": [
+        {
+          "type": "paragraph",
+          "position": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "col": 26,
+              "offset": 26
+            }
+          }
+        },
+        {
+          "type": "paragraph",
+          "position": {
+            "start": {
+              "line": 2,
+              "col": 0,
+              "offset": 28
+            },
+            "end": {
+              "line": 2,
+              "col": 37,
+              "offset": 65
+            }
+          }
+        },
+        {
+          "type": "paragraph",
+          "position": {
+            "start": {
+              "line": 4,
+              "col": 0,
+              "offset": 67
+            },
+            "end": {
+              "line": 4,
+              "col": 27,
+              "offset": 94
+            }
+          }
+        }
+      ]
+    }
+  }
+}
