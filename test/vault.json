@@ -1,6 +1,8 @@
 {
-  "plugin.app.vault.getMarkdownFiles()": [
+  "vault.getMarkdownFiles()": [
     {
+      "path": "Tags.md",
+      "name": "Tags.md",
       "stat": {
         "ctime": 1625973235399,
         "mtime": 1625973248682,
@@ -8,29 +10,31 @@
       },
       "basename": "Tags",
       "extension": "md",
-      "path": "Tags.md",
-      "name": "Tags.md",
       "parent": {
         "path": "/",
-        "name": ""
+        "name": "",
+        "parent": null
       }
     },
     {
+      "path": "Simple.md",
+      "name": "Simple.md",
       "stat": {
         "ctime": 1625967748431,
-        "mtime": 1625972301310,
+        "mtime": 1625984387260,
         "size": 27
       },
       "basename": "Simple",
       "extension": "md",
-      "path": "Simple.md",
-      "name": "Simple.md",
       "parent": {
         "path": "/",
-        "name": ""
+        "name": "",
+        "parent": null
       }
     },
     {
+      "path": "Lists.md",
+      "name": "Lists.md",
       "stat": {
         "ctime": 1625972267015,
         "mtime": 1625972411224,
@@ -38,14 +42,15 @@
       },
       "basename": "Lists",
       "extension": "md",
-      "path": "Lists.md",
-      "name": "Lists.md",
       "parent": {
         "path": "/",
-        "name": ""
+        "name": "",
+        "parent": null
       }
     },
     {
+      "path": "Links.md",
+      "name": "Links.md",
       "stat": {
         "ctime": 1625972431892,
         "mtime": 1625973169363,
@@ -53,14 +58,15 @@
       },
       "basename": "Links",
       "extension": "md",
-      "path": "Links.md",
-      "name": "Links.md",
       "parent": {
         "path": "/",
-        "name": ""
+        "name": "",
+        "parent": null
       }
     },
     {
+      "path": "Headings.md",
+      "name": "Headings.md",
       "stat": {
         "ctime": 1625973267110,
         "mtime": 1625973292638,
@@ -68,14 +74,15 @@
       },
       "basename": "Headings",
       "extension": "md",
-      "path": "Headings.md",
-      "name": "Headings.md",
       "parent": {
         "path": "/",
-        "name": ""
+        "name": "",
+        "parent": null
       }
     },
     {
+      "path": "Folder/Folder Note.md",
+      "name": "Folder Note.md",
       "stat": {
         "ctime": 1625972173141,
         "mtime": 1625972220801,
@@ -83,18 +90,19 @@
       },
       "basename": "Folder Note",
       "extension": "md",
-      "path": "Folder/Folder Note.md",
-      "name": "Folder Note.md",
       "parent": {
         "path": "Folder",
         "name": "Folder",
         "parent": {
           "path": "/",
-          "name": ""
+          "name": "",
+          "parent": null
         }
       }
     },
     {
+      "path": "Folder/Child Folder/Child Folder Note.md",
+      "name": "Child Folder Note.md",
       "stat": {
         "ctime": 1625972152187,
         "mtime": 1625972222131,
@@ -102,8 +110,6 @@
       },
       "basename": "Child Folder Note",
       "extension": "md",
-      "path": "Folder/Child Folder/Child Folder Note.md",
-      "name": "Child Folder Note.md",
       "parent": {
         "path": "Folder/Child Folder",
         "name": "Child Folder",
@@ -112,12 +118,15 @@
           "name": "Folder",
           "parent": {
             "path": "/",
-            "name": ""
+            "name": "",
+            "parent": null
           }
         }
       }
     },
     {
+      "path": "Embeds.md",
+      "name": "Embeds.md",
       "stat": {
         "ctime": 1625973174205,
         "mtime": 1625973224238,
@@ -125,15 +134,40 @@
       },
       "basename": "Embeds",
       "extension": "md",
-      "path": "Embeds.md",
-      "name": "Embeds.md",
       "parent": {
         "path": "/",
-        "name": ""
+        "name": "",
+        "parent": null
       }
     }
   ],
-  "plugin.app.metadataCache.getCache(*)": {
+  "vault.read(*)": {
+    "Tags.md": "#tag\n\n#nested/tag",
+    "Simple.md": "The simplest possible note.",
+    "Lists.md": "This note contains lists.\n\n- This is an unordered list.\n- It has multiple items.\n- Three, in fact.\n\n1. This is an ordered list.\n2. It has multiple items.\n3. Also three, in fact.\n\n- This is an unordered list with children.\n\t- This is indented once.\n\t\t- This is indented twice.\n\t- This is also indented once.\n- This is a childless parent sibling.",
+    "Links.md": "This note contains links.\n\nLink without display text: [[Simple]]\n\nLink with display text: [[Simple|Link with display text]]\n\nLink to a note in a folder: [[Folder Note]]\n\nLink to self: [[Links]]\n\nMultiple links on the same line: [[Simple]], [[Folder Note]], [[Child Folder Note]]\n\nLink to a website: [Obsidian website](https://obsidian.md/)\n\nLink to an image: [[obsidian-logo.png]]\n",
+    "Headings.md": "# Heading 1\n\n## Heading 2\n\n### Heading 3\n\n#### Heading 4\n\n##### Heading 5\n",
+    "Folder/Folder Note.md": "Inside `/Folder`",
+    "Folder/Child Folder/Child Folder Note.md": "Inside `/Folder/Child Folder`",
+    "Embeds.md": "Embedded note: ![[Simple]]\n\nEmbedded logo: ![[obsidian-logo.png]]\n\nSelf-embedding: ![[Embeds]]"
+  },
+  "metadataCache.getFirstLinkpathDest(*)": {
+    "Tags.md": {},
+    "Simple.md": {},
+    "Lists.md": {},
+    "Links.md": {
+      "Simple": "Simple.md",
+      "Folder Note": "Folder/Folder Note.md",
+      "Links": "Links.md",
+      "Child Folder Note": "Folder/Child Folder/Child Folder Note.md",
+      "obsidian-logo.png": "obsidian-logo.png"
+    },
+    "Headings.md": {},
+    "Folder/Folder Note.md": {},
+    "Folder/Child Folder/Child Folder Note.md": {},
+    "Embeds.md": {}
+  },
+  "metadataCache.getCache(*)": {
     "Tags.md": {
       "tags": [
         {

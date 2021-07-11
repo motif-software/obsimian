@@ -1,80 +1,52 @@
 import { Plugin, TFile, TFolder } from "obsidian";
-import { map, pick, zipObject } from "lodash";
-import { mkdirpSync, writeJsonSync } from "fs-extra";
+import { flatten, keyBy, map, merge, pick, zipObject } from "lodash";
+import { mkdirp, mkdirpSync, writeJson, writeJsonSync } from "fs-extra";
 import { dirname } from "path";
+import { ObsimianData } from "src/fakes/Obsimian";
+
+const TFolderProps = ["path", "name"];
+const TFileProps = TFolderProps.concat("stat", "basename", "extension");
 
 function TFileToPojo(f: TFile): any {
-  if (!f) {
-    return f;
-  }
-  const pojo = pick(f, [
-    "stat",
-    "basename",
-    "extension",
-    "path",
-    "name",
-    "parent",
-  ]);
-  pojo.parent = TFolderToPojo(pojo.parent);
-  return pojo;
+  return merge({}, pick(f, TFileProps), { parent: TFolderToPojo(f.parent) });
 }
 
-function TFolderToPojo(f: TFolder): any {
+function TFolderToPojo(f?: TFolder): any {
   if (!f) {
-    return f;
+    return null;
   }
-  const pojo = pick(f, ["path", "name", "parent"]);
-  console.log(pojo);
-  pojo.parent = TFolderToPojo(pojo.parent);
-  return pojo;
+  return merge({}, pick(f, TFolderProps), { parent: TFolderToPojo(f.parent) });
 }
 
 /**
- * Dumps the output of Obsidian for testing.
+ * Dumps the output of Obsidian's APIs into {@code outFile} for testing.
  */
-export function exportData(plugin: Plugin, outFile?: string) {
-  console.log("dump", plugin);
-
-  // Gather data.
+export async function exportData(
+  plugin: Plugin,
+  outFile: string
+): Promise<ObsimianData> {
   const mds = plugin.app.vault.getMarkdownFiles();
+  const paths = map(mds, "path");
+  const contents = Promise.all(mds.map((md) => plugin.app.vault.read(md)));
   const metadatas = mds.map((md) => plugin.app.metadataCache.getFileCache(md));
-
-  // Transform for dump.
-  mds.map((md) => ({
-    stat: md.stat,
-    basename: md.basename,
-    extension: md.extension,
-    path: md.path,
-    name: md.name,
-    parent: md.parent,
-  }));
+  const linkpaths = mds.map((md, i) => {
+    const links = map(metadatas[i].links, "link");
+    const dests = links.map(
+      (link) =>
+        plugin.app.metadataCache.getFirstLinkpathDest(link, md.path).path
+    );
+    return zipObject(links, dests);
+  });
 
   // Collect for dump.
   const data = {
-    "plugin.app.vault.getMarkdownFiles()": mds.map(TFileToPojo),
-    "plugin.app.metadataCache.getCache(*)": zipObject(
-      map(mds, "path"),
-      metadatas
-    ),
+    "vault.getMarkdownFiles()": mds.map(TFileToPojo),
+    "vault.read(*)": zipObject(paths, await contents),
+    "metadataCache.getFirstLinkpathDest(*)": zipObject(paths, linkpaths),
+    "metadataCache.getCache(*)": zipObject(paths, metadatas),
   };
-  console.log(data);
-  if (outFile) {
-    mkdirpSync(dirname(outFile));
-    writeJsonSync(outFile, data, { spaces: 2 });
-  }
+
+  await mkdirp(dirname(outFile));
+  await writeJson(outFile, data, { spaces: 2 });
   return data;
 }
-
-// (plugin.app.vault.adapter as FileSystemAdapter).getBasePath();
-// const files = plugin.app.vault.getMarkdownFiles();
-// await Promise.all(files.map(f => plugin.app.vault.read(f)
-// const { headings, links, embeds, listItems, frontmatter } = plugin.app.metadataCache.getCache(record.path);
-// out.logo = logoLink && plugin.app.metadataCache.getFirstLinkpathDest(logoLink, record.path);
-// const vaultDir = (plugin.app.vault.adapter as FileSystemAdapter).getBasePath();
-// const linkFile = plugin.app.metadataCache.getFirstLinkpathDest(link, record.path);
-// const cache = plugin.app.metadataCache.getFileCache(linkFile);
-// const linkFile = plugin.app.metadataCache.getFirstLinkpathDest(link, record.path);
-// const cache = plugin.app.metadataCache.getFileCache(linkFile);
-// let content = await plugin.app.vault.read(linkFile);
-// const target = plugin.app.metadataCache.getFirstLinkpathDest(n.to.substr(5), record.path);
-// const slug = plugin.app.metadataCache.getCache(target.path).frontmatter?.slug || target.path;

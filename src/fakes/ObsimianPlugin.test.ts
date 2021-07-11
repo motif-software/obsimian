@@ -1,6 +1,6 @@
 import ObsimianPlugin from "./ObsimianPlugin";
 
-const testData = require("../../test/data.json");
+const testData = require("../../test/vault.json");
 
 describe("ObsimianPlugin", () => {
   const plugin = new ObsimianPlugin(testData);
