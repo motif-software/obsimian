@@ -18,8 +18,8 @@ export default class ObsimianMetadataCache extends Obsimian {
     linkpath: string,
     sourcePath: string
   ): any /*TFile*/ | null {
-    return this.data["metadataCache.getFirstLinkpathDest(*)"][
-      sourcePath
-    ][linkpath];
+    return this.data["metadataCache.getFirstLinkpathDest(*)"][sourcePath][
+      linkpath
+    ];
   }
 }
