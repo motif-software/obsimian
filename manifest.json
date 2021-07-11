@@ -1,0 +1,10 @@
+{
+  "id": "obsimian",
+  "name": "Obsimian",
+  "version": "0.1.0",
+  "minAppVersion": "0.9.12",
+  "description": "Obsidian simulation framework for testing Obsidian plugins.",
+  "author": "Oliver Lade",
+  "authorUrl": "https://motif.software",
+  "isDesktopOnly": false
+}

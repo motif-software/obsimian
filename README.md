@@ -14,7 +14,7 @@ If you want to customize the content of the vault:
 1. Create an Obsidian vault, or download the Obsimian test vault as a starting point.
 2. Open the vault in Obsidian and modify to your heart's content (hah).
 3. Install and enable the Obsimian plugin in Obsidian (it should be preinstalled in the test vault).
-4. Run the "Obsimian: Dump data" command. By default, this will create a JSON file in the root of your Obsidian vault, but this can be configured in the Obsimian plugin settings.
+4. Run the "Obsimian: Export data for testing" command. By default, this will create a JSON file in the root of your Obsidian vault, but this can be configured in the Obsimian plugin settings.
 5. Copy the JSON file to your project.
 6. In your test, import the JSON data with `require` and pass it to the `ObsimianPlugin` constructor.
 
