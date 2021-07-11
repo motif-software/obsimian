@@ -1,8 +1,8 @@
 export interface ObsimianData {
-  "plugin.app.vault.getMarkdownFiles()": any; //map(mds, TFileToPojo),
-  "plugin.app.vault.read(*)": any; //zipObject(paths, await contents),
-  "plugin.app.metadataCache.getFileCache(*)": any; //zipObject(paths, metadatas),
-  "plugin.app.metadataCache.getFirstLinkpathDest(*)": any; //zipObject(paths, linkpathMaps),
+  "vault.getMarkdownFiles()": any;
+  "vault.read(*)": any;
+  "metadataCache.getCache(*)": any;
+  "metadataCache.getFirstLinkpathDest(*)": any;
 }
 
 export abstract class Obsimian {

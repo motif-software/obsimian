@@ -1,8 +1,8 @@
 # Plugin build
 main.js
 
-# Plugin configuration
-/data.json
+# Obsidian configuration
+test/vault/.obsidian/workspace
 
 # Logs
 logs

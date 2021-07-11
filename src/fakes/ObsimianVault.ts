@@ -7,12 +7,12 @@ export default class ObsimianVault extends Obsimian {
   }
 
   getMarkdownFiles(): TFileish[] {
-    return this.data["plugin.app.vault.getMarkdownFiles()"];
+    return this.data["vault.getMarkdownFiles()"];
   }
 
   read(file: TFileish): Promise<string> {
     return new Promise((resolve, reject) => {
-      const content = this.data["plugin.app.vault.read(*)"][file.path];
+      const content = this.data["vault.read(*)"][file.path];
       process.nextTick(() =>
         content !== undefined
           ? resolve(content)

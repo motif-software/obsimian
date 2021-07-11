@@ -1,15 +1,15 @@
 import ObsimianMetadataCache from "./ObsimianMetadataCache";
 
-const testData = require("../../test/data.json");
+const testData = require("../../test/vault.json");
 
 describe("ObsimianMetadataCache", () => {
   const cache = new ObsimianMetadataCache(testData);
 
   describe("getCache", () => {
     it("can read metadata", () => {
-      const data = cache.getCache("Page Simple.md");
+      const data = cache.getCache("Simple.md");
       expect(data).toEqual(
-        testData["plugin.app.metadataCache.getCache(*)"]["Page Simple.md"]
+        testData["metadataCache.getCache(*)"]["Simple.md"]
       );
       expect(data.sections[0].position.start).toEqual({
         line: 0,

@@ -7,7 +7,7 @@ export default class ObsimianMetadataCache extends Obsimian {
   }
 
   getCache(path: string): any /*CachedMetadata*/ | null {
-    return this.data["plugin.app.metadataCache.getCache(*)"][path];
+    return this.data["metadataCache.getCache(*)"][path];
   }
 
   getFileCache(file: any /*TFile*/): any /*CachedMetadata*/ | null {
@@ -18,7 +18,7 @@ export default class ObsimianMetadataCache extends Obsimian {
     linkpath: string,
     sourcePath: string
   ): any /*TFile*/ | null {
-    return this.data["plugin.app.metadataCache.getFirstLinkpathDest(*)"][
+    return this.data["metadataCache.getFirstLinkpathDest(*)"][
       sourcePath
     ][linkpath];
   }

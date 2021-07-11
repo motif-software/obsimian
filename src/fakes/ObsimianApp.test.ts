@@ -1,6 +1,6 @@
 import ObsimianApp from "./ObsimianApp";
 
-const testData = require("../../test/data.json");
+const testData = require("../../test/vault.json");
 
 describe("ObsimianApp", () => {
   const app = new ObsimianApp(testData);
