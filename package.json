@@ -1,16 +1,16 @@
 {
   "name": "obsimian",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "description": "Obsidian simulation framework for testing Obsidian plugins.",
+  "files": [
+    "index.*"
+  ],
   "scripts": {
     "tidy": "prettier --write src ./*.{js,json,md}",
     "dev": "rollup --config rollup.config.js -w",
     "build": "yarn buildFakes && yarn buildPlugin",
     "buildFakes": "tsc -p src/fakes",
-    "buildPlugin": "rollup --config rollup.config.js --environment BUILD:production",
-    "prepare": "yarn build && cp package.json dist/",
-    "prepublishOnly": "echo \"Error: Don't run 'yarn publish' in root. Use 'yarn dist' instead.\" && exit 1",
-    "dist": "yarn prepare && cd dist && yarn publish --ignore-scripts"
+    "buildPlugin": "rollup --config rollup.config.js --environment BUILD:production"
   },
   "keywords": [
     "obsidian",

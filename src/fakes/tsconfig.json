@@ -1,20 +1,19 @@
 {
   "compilerOptions": {
-    "baseUrl": "../..",
-    "outDir": "../../dist",
+    "rootDir": ".",
+    "outFile": "../../index.js",
     "declaration": true,
     "inlineSourceMap": true,
     "inlineSources": true,
-    "module": "commonjs",
+    "module": "system",
     "target": "es6",
     "allowJs": true,
     "noImplicitAny": false,
     "moduleResolution": "node",
     "importHelpers": true,
-    "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "lib": ["dom", "es5", "scripthost", "es2015"]
   },
-  "include": ["**/*.ts"],
-  "exclude": ["dist", "node_modules", "**/*.test.ts"]
+  "files": ["index.ts"],
+  "exclude": []
 }

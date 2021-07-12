@@ -1,6 +1,7 @@
 # Build artifacts
 dist/
-main.js
+/main.js
+/index.*
 
 # Obsidian configuration
 test/vault/.obsidian/workspace
