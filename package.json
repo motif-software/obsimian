@@ -2,19 +2,28 @@
   "name": "obsimian",
   "version": "0.1.0",
   "description": "Obsidian simulation framework for testing Obsidian plugins.",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
   "scripts": {
-    "dev": "rollup --config rollup.config.js -w",
     "tidy": "prettier --write src ./*.{js,json,md}",
-    "prepublish": "tsc",
-    "build": "rollup --config rollup.config.js --environment BUILD:production"
+    "dev": "rollup --config rollup.config.js -w",
+    "build": "yarn buildFakes && yarn buildPlugin",
+    "buildFakes": "tsc -p src/fakes",
+    "buildPlugin": "rollup --config rollup.config.js --environment BUILD:production",
+    "prepare": "yarn build && cp package.json dist/",
+    "prepublishOnly": "echo \"Error: Don't run 'yarn publish' in root. Use 'yarn dist' instead.\" && exit 1",
+    "dist": "yarn prepare && cd dist && yarn publish --ignore-scripts"
   },
   "keywords": [
+    "obsidian",
     "testing"
   ],
   "author": "Oliver Lade <piemaster21@gmail.com>",
+  "homepage": "https://github.com/motif-software/obsimian",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/motif-software/obsimian.git"
+  },
   "license": "MIT",
+  "private": false,
   "devDependencies": {
     "@rollup/plugin-commonjs": "^18.0.0",
     "@rollup/plugin-json": "^4.1.0",
@@ -22,6 +31,7 @@
     "@rollup/plugin-typescript": "^8.2.1",
     "@types/fs-extra": "^9.0.11",
     "@types/jest": "^26.0.24",
+    "@types/lodash": "^4.14.170",
     "@types/node": "^14.14.37",
     "jest": "^27.0.6",
     "obsidian": "^0.12.0",
@@ -32,7 +42,6 @@
     "typescript": "^4.2.4"
   },
   "dependencies": {
-    "@types/lodash": "^4.14.170",
     "fs-extra": "^10.0.0",
     "lodash": "^4.17.21"
   }

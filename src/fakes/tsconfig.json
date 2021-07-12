@@ -1,11 +1,11 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
-    "outDir": "dist",
+    "baseUrl": "../..",
+    "outDir": "../../dist",
     "declaration": true,
     "inlineSourceMap": true,
     "inlineSources": true,
-    "module": "ESNext",
+    "module": "commonjs",
     "target": "es6",
     "allowJs": true,
     "noImplicitAny": false,
@@ -15,5 +15,6 @@
     "allowSyntheticDefaultImports": true,
     "lib": ["dom", "es5", "scripthost", "es2015"]
   },
-  "exclude": ["dist", "node_modules", "**/*.test.*"]
+  "include": ["**/*.ts"],
+  "exclude": ["dist", "node_modules", "**/*.test.ts"]
 }
