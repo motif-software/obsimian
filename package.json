@@ -10,7 +10,8 @@
     "dev": "rollup --config rollup.config.js -w",
     "build": "yarn buildFakes && yarn buildPlugin",
     "buildFakes": "tsc -p src/fakes",
-    "buildPlugin": "rollup --config rollup.config.js --environment BUILD:production"
+    "buildPlugin": "rollup --config rollup.config.js --environment BUILD:production",
+    "test": "jest"
   },
   "keywords": [
     "obsidian",

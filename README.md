@@ -9,18 +9,18 @@ Obsidian simulation framework for testing Obsidian plugins.
 If you simply want to test your plugin code against the standard Obsimian test vault:
 
 1. Add Obsimian as a dev dependency:
-    ```sh
-    yarn add -D obsimian
-    ```
+   ```sh
+   yarn add -D obsimian
+   ```
 1. In your test, create an `ObsimianPlugin` initialized with the downloaded data.
-    ```ts
-    describe("my plugin", () => {
-      const app = new ObsimianApp(data);
-      it("does the bar correctly", () => {
-        expect(businessLogic.doTheBar(app)).toEqual("Bar.");
-      });
-    });
-    ```
+   ```ts
+   describe("my plugin", () => {
+     const app = new ObsimianApp(data);
+     it("does the bar correctly", () => {
+       expect(businessLogic.doTheBar(app)).toEqual("Bar.");
+     });
+   });
+   ```
 
 If you want to customize the content of the fake vault:
 
@@ -28,10 +28,9 @@ If you want to customize the content of the fake vault:
 1. Open the vault in Obsidian and modify the content to exercise the specific features of your plugin.
 1. Install and enable the Obsimian plugin in Obsidian (it should be preinstalled in the test vault).
 1. Run the "Obsimian: Export data for testing" command. By default, this will create a JSON file in the root of your Obsidian vault, but this can be configured in the Obsimian plugin settings.
-    ![Export data command in Obsidian](img/obsidian-command.png)
+   ![Export data command in Obsidian](img/obsidian-command.png)
 1. Copy the JSON file to your project.
 1. In your test, import the JSON data with `require` and pass it to the `ObsimianPlugin` constructor.
-
 
 ## Design
 
@@ -94,7 +93,6 @@ Realistically, there will be gaps in behavior of Obsidian and Obsimian. Obsimian
 
 If you discover such a gap, please file a bug in https://github.com/motif-software/obsimian/issues. Ideally include some content and an API call that demonstrate the problem.
 
-
 ## Package Contents
 
 ### src/plugin
@@ -109,7 +107,9 @@ The fake Obsidian components that you can use for unit testing your plugin.
 
 The test vault is a real Obsidian vault with fake content crafted to expose typical edge cases in plugins.
 
-## Testing Obsimian
+## Development
+
+### Testing
 
 Testing Obsimian involves exporting data from the test vault, using it to initialize the fake components, then asserting that their APIs return the expected outputs. The tests are run with Jest:
 
@@ -118,3 +118,9 @@ jest --watch
 ```
 
 Adding new test cases may involve adding new assertions, adding new content to the test vault, or both.
+
+### Releasing
+
+The `release-plugin` GitHub workflow automates the release of the plugin. When a release tag (a [semver](https://semver.org/) version string without a leading `v`) is pushed, it will bundle the Obsidian plugin `main.js` and upload it as a GitHub release.
+
+The Obsimian fakes library is published to NPM manually. `yarn publish` builds `src/fakes/index.ts` to `index.{js,d.ts}` and publishes the package to the public NPM registry.
