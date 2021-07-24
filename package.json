@@ -3,13 +3,16 @@
   "version": "0.3.0",
   "description": "Obsidian simulation framework for testing Obsidian plugins.",
   "files": [
-    "index.*"
+    "index.*",
+    "dist/*"
   ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "tidy": "prettier --write src ./*.{js,json,md}",
     "dev": "rollup --config rollup.config.js -w",
     "build": "yarn buildFakes && yarn buildPlugin",
-    "buildFakes": "tsc -p src/fakes",
+    "buildFakes": "tsc -p src/fakes && cp package.json dist/",
     "buildPlugin": "rollup --config rollup.config.js --environment BUILD:production",
     "test": "jest"
   },

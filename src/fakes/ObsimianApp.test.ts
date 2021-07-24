@@ -1,4 +1,4 @@
-import ObsimianApp from "./ObsimianApp";
+import { ObsimianApp } from "./ObsimianApp";
 
 const testData = require("../../test/vault.json");
 

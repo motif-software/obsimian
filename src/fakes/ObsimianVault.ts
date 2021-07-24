@@ -1,7 +1,7 @@
 import { Obsimian, ObsimianData, TFileish } from "./Obsimian";
 
 /** Simulates an Obsidian {@code Vault}. */
-export default class ObsimianVault extends Obsimian {
+export class ObsimianVault extends Obsimian {
   constructor(data: ObsimianData) {
     super(data);
   }
@@ -20,4 +20,7 @@ export default class ObsimianVault extends Obsimian {
       );
     });
   }
+
+  async rename(file: TFileish, newPath: string): Promise<void> {}
+  async modify(file: TFileish, data: string): Promise<void> {}
 }

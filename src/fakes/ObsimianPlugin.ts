@@ -1,8 +1,8 @@
 import { Obsimian, ObsimianData } from "./Obsimian";
-import ObsimianApp from "./ObsimianApp";
+import { ObsimianApp } from "./ObsimianApp";
 
 /** Simulates an Obsidian {@code Plugin}. */
-export default class ObsimianPlugin extends Obsimian {
+export class ObsimianPlugin extends Obsimian {
   _app: ObsimianApp;
 
   constructor(data: ObsimianData) {

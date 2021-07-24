@@ -1,5 +1,5 @@
 import { TFileish } from "./Obsimian";
-import ObsimianVault from "./ObsimianVault";
+import { ObsimianVault } from "./ObsimianVault";
 
 const testData = require("../../test/vault.json");
 
