@@ -10,7 +10,7 @@ export function fromPairs<T>(
   pairs: List<[PropertyName, T]> | null | undefined
 ): Dictionary<T> {
   const out = {};
-  for (let i = 0; i < pairs.length; i++) {
+  for (let i = 0; i < pairs?.length; i++) {
     out[pairs[i][0]] = pairs[i][1];
   }
   return out;

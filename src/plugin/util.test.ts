@@ -19,6 +19,8 @@ describe("pick", () => {
 describe("fromPairs", () => {
   it("handles empty", () => {
     expect(fromPairs([])).toEqual({});
+    expect(fromPairs(null)).toEqual({});
+    expect(fromPairs(undefined)).toEqual({});
   });
   it("handles single pair", () => {
     expect(fromPairs([["a", 1]])).toEqual({ a: 1 });

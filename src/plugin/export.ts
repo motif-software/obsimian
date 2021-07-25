@@ -19,9 +19,10 @@ async function gatherMarkdownData(app: App): Promise<ObsimianData> {
 
   const markdownContents = await Promise.all(files.map((md) => app.vault.read(md)));
   const metadatas = files.map((md) => app.metadataCache.getFileCache(md));
-  const getDest = app.metadataCache.getFirstLinkpathDest;
+  const getDest = (link, path) =>
+    TFileToObsimianFile(app.metadataCache.getFirstLinkpathDest(link, path));
   const fileLinkpathDests = files.map((md, i) =>
-    fromPairs(metadatas[i].links.map((l) => [l.link, getDest(l.link, md.path)]))
+    fromPairs(metadatas[i].links?.map((l) => [l.link, getDest(l.link, md.path)]))
   );
 
   return {
