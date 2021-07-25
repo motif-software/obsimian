@@ -1,4 +1,4 @@
-import ObsimianPlugin from "./ObsimianPlugin";
+import { ObsimianPlugin } from "./ObsimianPlugin";
 
 const testData = require("../../test/vault.json");
 

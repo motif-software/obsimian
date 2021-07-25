@@ -1,3 +1,10 @@
-main.js
+# Build artifacts
+dist/
+*.log
+
+# Plugin outputs
+/main.js
 /data.json
+
+# Testing data
 /test/vault.json

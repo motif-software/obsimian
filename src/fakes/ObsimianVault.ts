@@ -1,16 +1,16 @@
-import { Obsimian, ObsimianData, TFileish } from "./Obsimian";
+import { Obsimian, ObsimianData, ObsimianFile } from "./Obsimian";
 
 /** Simulates an Obsidian {@code Vault}. */
-export default class ObsimianVault extends Obsimian {
+export class ObsimianVault extends Obsimian {
   constructor(data: ObsimianData) {
     super(data);
   }
 
-  getMarkdownFiles(): TFileish[] {
+  getMarkdownFiles(): ObsimianFile[] {
     return this.data["vault.getMarkdownFiles()"];
   }
 
-  read(file: TFileish): Promise<string> {
+  read(file: ObsimianFile): Promise<string> {
     return new Promise((resolve, reject) => {
       const content = this.data["vault.read(*)"][file.path];
       process.nextTick(() =>
@@ -20,4 +20,7 @@ export default class ObsimianVault extends Obsimian {
       );
     });
   }
+
+  async rename(file: ObsimianFile, newPath: string): Promise<void> {}
+  async modify(file: ObsimianFile, data: string): Promise<void> {}
 }

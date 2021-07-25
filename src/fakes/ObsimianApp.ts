@@ -1,9 +1,9 @@
 import { Obsimian, ObsimianData } from "./Obsimian";
-import ObsimianMetadataCache from "./ObsimianMetadataCache";
-import ObsimianVault from "./ObsimianVault";
+import { ObsimianMetadataCache } from "./ObsimianMetadataCache";
+import { ObsimianVault } from "./ObsimianVault";
 
 /** Simulates an Obsidian {@code App}. */
-export default class ObsimianApp extends Obsimian {
+export class ObsimianApp extends Obsimian {
   _vault: ObsimianVault;
   _cache: ObsimianMetadataCache;
 

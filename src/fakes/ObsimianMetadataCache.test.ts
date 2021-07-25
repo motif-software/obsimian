@@ -1,4 +1,4 @@
-import ObsimianMetadataCache from "./ObsimianMetadataCache";
+import { ObsimianMetadataCache } from "./ObsimianMetadataCache";
 
 const testData = require("../../test/vault.json");
 

@@ -1,7 +1,7 @@
 import { Obsimian, ObsimianData } from "./Obsimian";
 
 /** Simulates an Obsidian {@code MetadataCache}. */
-export default class ObsimianMetadataCache extends Obsimian {
+export class ObsimianMetadataCache extends Obsimian {
   constructor(data: ObsimianData) {
     super(data);
   }

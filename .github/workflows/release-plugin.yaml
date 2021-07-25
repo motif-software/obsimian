@@ -6,7 +6,7 @@ on:
     - "[0-9]+.[0-9]+.[0-9]+"
 
 env:
-  PLUGIN_NAME: obsimian
+  PLUGIN_NAME: obsimian-exporter
 
 jobs:
   build:
@@ -14,7 +14,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Use Node.js
+    - name: Setup Node.js
       uses: actions/setup-node@v1
       with:
         node-version: '15.x'
@@ -30,7 +30,7 @@ jobs:
         ls
         echo "::set-output name=tag_name::$(git tag --sort version:refname | tail -n 1)"
 
-    - name: Create Release
+    - name: Create release
       id: create_release
       uses: actions/create-release@v1
       env:
@@ -42,7 +42,7 @@ jobs:
         draft: false
         prerelease: false
 
-    - name: Upload zip file
+    - name: Upload ZIP file
       id: upload-zip
       uses: actions/upload-release-asset@v1
       env:
