@@ -1,52 +1,41 @@
-import { Plugin, TFile, TFolder } from "obsidian";
-import { flatten, keyBy, map, merge, pick, zipObject } from "lodash";
-import { mkdirp, mkdirpSync, writeJson, writeJsonSync } from "fs-extra";
+import { App, Plugin, TFile, TFolder } from "obsidian";
 import { dirname } from "path";
-import { ObsimianData } from "src/fakes/Obsimian";
-
-const TFolderProps = ["path", "name"];
-const TFileProps = TFolderProps.concat("stat", "basename", "extension");
-
-function TFileToPojo(f: TFile): any {
-  return merge({}, pick(f, TFileProps), { parent: TFolderToPojo(f.parent) });
-}
-
-function TFolderToPojo(f?: TFolder): any {
-  if (!f) {
-    return null;
-  }
-  return merge({}, pick(f, TFolderProps), { parent: TFolderToPojo(f.parent) });
-}
+import { ObsimianData, ObsimianFile } from "src/fakes/Obsimian";
+import { TFileToObsimianFile } from "./mapping";
+import { fromPairs, pick, zipObject } from "./util";
 
 /**
  * Dumps the output of Obsidian's APIs into {@code outFile} for testing.
  */
-export async function exportData(
-  plugin: Plugin,
-  outFile: string
-): Promise<ObsimianData> {
-  const mds = plugin.app.vault.getMarkdownFiles();
-  const paths = map(mds, "path");
-  const contents = Promise.all(mds.map((md) => plugin.app.vault.read(md)));
-  const metadatas = mds.map((md) => plugin.app.metadataCache.getFileCache(md));
-  const linkpaths = mds.map((md, i) => {
-    const links = map(metadatas[i].links, "link");
-    const dests = links.map(
-      (link) =>
-        plugin.app.metadataCache.getFirstLinkpathDest(link, md.path).path
-    );
-    return zipObject(links, dests);
-  });
-
-  // Collect for dump.
-  const data = {
-    "vault.getMarkdownFiles()": mds.map(TFileToPojo),
-    "vault.read(*)": zipObject(paths, await contents),
-    "metadataCache.getFirstLinkpathDest(*)": zipObject(paths, linkpaths),
-    "metadataCache.getCache(*)": zipObject(paths, metadatas),
-  };
-
-  await mkdirp(dirname(outFile));
-  await writeJson(outFile, data, { spaces: 2 });
+export async function exportData(plugin: Plugin, outFile: string): Promise<ObsimianData> {
+  const data = await gatherMarkdownData(plugin.app);
+  await writeData(plugin, data, outFile);
   return data;
+}
+
+async function gatherMarkdownData(app: App): Promise<ObsimianData> {
+  const files = app.vault.getMarkdownFiles();
+  const paths = files.map((f) => f.path);
+
+  const markdownContents = await Promise.all(files.map((md) => app.vault.read(md)));
+  const metadatas = files.map((md) => app.metadataCache.getFileCache(md));
+  const getDest = app.metadataCache.getFirstLinkpathDest;
+  const fileLinkpathDests = files.map((md, i) =>
+    fromPairs(metadatas[i].links.map((l) => [l.link, getDest(l.link, md.path)]))
+  );
+
+  return {
+    "vault.getMarkdownFiles()": files.map(TFileToObsimianFile),
+    "vault.read(*)": zipObject(paths, markdownContents),
+    "metadataCache.getCache(*)": zipObject(paths, metadatas),
+    "metadataCache.getFirstLinkpathDest(*)": zipObject(paths, fileLinkpathDests),
+  };
+}
+
+async function writeData(
+  plugin: Plugin,
+  data: ObsimianData,
+  outFile: string
+): Promise<ObsimianFile> {
+  return plugin.app.vault.create(outFile, JSON.stringify(data, null, 2));
 }

@@ -1,4 +1,4 @@
-import { TFileish } from "./Obsimian";
+import { ObsimianFile } from "./Obsimian";
 import { ObsimianVault } from "./ObsimianVault";
 
 const testData = require("../../test/vault.json");
@@ -9,7 +9,7 @@ describe("ObsimianVault", () => {
   describe("read", () => {
     testData["vault.getMarkdownFiles()"].forEach((f) => {
       it(`can read ${f.path}`, () => {
-        const file: TFileish = { name: "", path: f.path };
+        const file: ObsimianFile = { name: "", path: f.path };
         return expect(vault.read(file)).resolves.toEqual(
           testData["vault.read(*)"][f.path]
         );

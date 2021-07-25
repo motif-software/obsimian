@@ -8,12 +8,6 @@ export interface ObsimianExportPluginSettings {
    * Relative paths are resolved relative to the vault directory.
    */
   outDir: string;
-
-  /**
-   * If true, split the Obsimian data into a separate file per component. Otherwise aggregate all
-   * data into a single file.
-   */
-  splitData: boolean;
 }
 
 /** An Obsidian Plugin that has Obsimian settings. */
@@ -56,16 +50,5 @@ export class ObsimianExportPluginSettingsTab extends PluginSettingTab {
           .setValue(this.plugin.settings.outDir)
           .onChange(this.onChangeSave("outDir"));
       });
-
-    new Setting(containerEl)
-      .setName("Split data")
-      .setDesc(
-        "Split data into one file per component (true) or dump a single file (false)."
-      )
-      .addToggle((toggle) =>
-        toggle
-          .setValue(this.plugin.settings.splitData)
-          .onChange(this.onChangeSave("splitData"))
-      );
   }
 }
