@@ -1,8 +1,7 @@
-import { App, Plugin, TFile, TFolder } from "obsidian";
-import { dirname } from "path";
+import { App, Plugin } from "obsidian";
 import { ObsimianData, ObsimianFile } from "src/fakes/Obsimian";
 import { TFileToObsimianFile } from "./mapping";
-import { fromPairs, pick, zipObject } from "./util";
+import { fromPairs, zipObject } from "./util";
 
 /**
  * Dumps the output of Obsidian's APIs into {@code outFile} for testing.
