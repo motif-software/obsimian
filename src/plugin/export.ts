@@ -2,6 +2,7 @@ import { App, Plugin } from "obsidian";
 import { ObsimianData, ObsimianFile } from "src/fakes/Obsimian";
 import { TFileToObsimianFile } from "./mapping";
 import { fromPairs, zipObject } from "./util";
+import path from "path";
 
 /**
  * Dumps the output of Obsidian's APIs into {@code outFile} for testing.
@@ -37,5 +38,14 @@ async function writeData(
   data: ObsimianData,
   outFile: string
 ): Promise<ObsimianFile> {
-  return plugin.app.vault.create(outFile, JSON.stringify(data, null, 2));
+  const fs = plugin.app.vault.adapter;
+  fs.write(outFile, JSON.stringify(data, null, 2));
+  return {
+    name: path.basename(outFile),
+    path: outFile,
+    parent: {
+      name: path.dirname(outFile),
+      path: path.resolve(outFile, ".."),
+    },
+  };
 }
