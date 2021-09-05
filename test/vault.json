@@ -4,8 +4,8 @@
       "path": "Tags.md",
       "name": "Tags.md",
       "stat": {
-        "ctime": 1625973235399,
-        "mtime": 1625973248682,
+        "ctime": 1625997387698,
+        "mtime": 1625997387698,
         "size": 17
       },
       "basename": "Tags",
@@ -20,8 +20,8 @@
       "path": "Simple.md",
       "name": "Simple.md",
       "stat": {
-        "ctime": 1625967748431,
-        "mtime": 1625984387260,
+        "ctime": 1625997387697,
+        "mtime": 1625997387697,
         "size": 27
       },
       "basename": "Simple",
@@ -36,8 +36,8 @@
       "path": "Lists.md",
       "name": "Lists.md",
       "stat": {
-        "ctime": 1625972267015,
-        "mtime": 1625972411224,
+        "ctime": 1625997387697,
+        "mtime": 1625997387697,
         "size": 344
       },
       "basename": "Lists",
@@ -52,8 +52,8 @@
       "path": "Links.md",
       "name": "Links.md",
       "stat": {
-        "ctime": 1625972431892,
-        "mtime": 1625973169363,
+        "ctime": 1625997387696,
+        "mtime": 1625997387697,
         "size": 381
       },
       "basename": "Links",
@@ -68,8 +68,8 @@
       "path": "Headings.md",
       "name": "Headings.md",
       "stat": {
-        "ctime": 1625973267110,
-        "mtime": 1625973292638,
+        "ctime": 1625997387696,
+        "mtime": 1625997387696,
         "size": 74
       },
       "basename": "Headings",
@@ -81,11 +81,27 @@
       }
     },
     {
+      "path": "Frontmatter.md",
+      "name": "Frontmatter.md",
+      "stat": {
+        "ctime": 1630560959901,
+        "mtime": 1630565974437,
+        "size": 88
+      },
+      "basename": "Frontmatter",
+      "extension": "md",
+      "parent": {
+        "path": "/",
+        "name": "",
+        "parent": null
+      }
+    },
+    {
       "path": "Folder/Folder Note.md",
       "name": "Folder Note.md",
       "stat": {
-        "ctime": 1625972173141,
-        "mtime": 1625972220801,
+        "ctime": 1625997387695,
+        "mtime": 1625997387696,
         "size": 16
       },
       "basename": "Folder Note",
@@ -104,8 +120,8 @@
       "path": "Folder/Child Folder/Child Folder Note.md",
       "name": "Child Folder Note.md",
       "stat": {
-        "ctime": 1625972152187,
-        "mtime": 1625972222131,
+        "ctime": 1625997387695,
+        "mtime": 1625997387695,
         "size": 29
       },
       "basename": "Child Folder Note",
@@ -128,8 +144,8 @@
       "path": "Embeds.md",
       "name": "Embeds.md",
       "stat": {
-        "ctime": 1625973174205,
-        "mtime": 1625973224238,
+        "ctime": 1625997387694,
+        "mtime": 1625997387695,
         "size": 94
       },
       "basename": "Embeds",
@@ -147,25 +163,10 @@
     "Lists.md": "This note contains lists.\n\n- This is an unordered list.\n- It has multiple items.\n- Three, in fact.\n\n1. This is an ordered list.\n2. It has multiple items.\n3. Also three, in fact.\n\n- This is an unordered list with children.\n\t- This is indented once.\n\t\t- This is indented twice.\n\t- This is also indented once.\n- This is a childless parent sibling.",
     "Links.md": "This note contains links.\n\nLink without display text: [[Simple]]\n\nLink with display text: [[Simple|Link with display text]]\n\nLink to a note in a folder: [[Folder Note]]\n\nLink to self: [[Links]]\n\nMultiple links on the same line: [[Simple]], [[Folder Note]], [[Child Folder Note]]\n\nLink to a website: [Obsidian website](https://obsidian.md/)\n\nLink to an image: [[obsidian-logo.png]]\n",
     "Headings.md": "# Heading 1\n\n## Heading 2\n\n### Heading 3\n\n#### Heading 4\n\n##### Heading 5\n",
+    "Frontmatter.md": "---\ntitle: Frontmatter example\nslug: /front\ntags:\n- foo\n- bar\n---\n\nSome content as well.",
     "Folder/Folder Note.md": "Inside `/Folder`",
     "Folder/Child Folder/Child Folder Note.md": "Inside `/Folder/Child Folder`",
     "Embeds.md": "Embedded note: ![[Simple]]\n\nEmbedded logo: ![[obsidian-logo.png]]\n\nSelf-embedding: ![[Embeds]]"
-  },
-  "metadataCache.getFirstLinkpathDest(*)": {
-    "Tags.md": {},
-    "Simple.md": {},
-    "Lists.md": {},
-    "Links.md": {
-      "Simple": "Simple.md",
-      "Folder Note": "Folder/Folder Note.md",
-      "Links": "Links.md",
-      "Child Folder Note": "Folder/Child Folder/Child Folder Note.md",
-      "obsidian-logo.png": "obsidian-logo.png"
-    },
-    "Headings.md": {},
-    "Folder/Folder Note.md": {},
-    "Folder/Child Folder/Child Folder Note.md": {},
-    "Embeds.md": {}
   },
   "metadataCache.getCache(*)": {
     "Tags.md": {
@@ -907,6 +908,60 @@
         }
       ]
     },
+    "Frontmatter.md": {
+      "sections": [
+        {
+          "type": "yaml",
+          "position": {
+            "start": {
+              "line": 0,
+              "col": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 6,
+              "col": 3,
+              "offset": 65
+            }
+          }
+        },
+        {
+          "type": "paragraph",
+          "position": {
+            "start": {
+              "line": 8,
+              "col": 0,
+              "offset": 67
+            },
+            "end": {
+              "line": 8,
+              "col": 21,
+              "offset": 88
+            }
+          }
+        }
+      ],
+      "frontmatter": {
+        "title": "Frontmatter example",
+        "slug": "/front",
+        "tags": [
+          "foo",
+          "bar"
+        ],
+        "position": {
+          "start": {
+            "line": 0,
+            "col": 0,
+            "offset": 0
+          },
+          "end": {
+            "line": 6,
+            "col": 3,
+            "offset": 65
+          }
+        }
+      }
+    },
     "Folder/Folder Note.md": {
       "sections": [
         {
@@ -1047,5 +1102,109 @@
         }
       ]
     }
+  },
+  "metadataCache.getFirstLinkpathDest(*)": {
+    "Tags.md": {},
+    "Simple.md": {},
+    "Lists.md": {},
+    "Links.md": {
+      "Simple": {
+        "path": "Simple.md",
+        "name": "Simple.md",
+        "stat": {
+          "ctime": 1625997387697,
+          "mtime": 1625997387697,
+          "size": 27
+        },
+        "basename": "Simple",
+        "extension": "md",
+        "parent": {
+          "path": "/",
+          "name": "",
+          "parent": null
+        }
+      },
+      "Folder Note": {
+        "path": "Folder/Folder Note.md",
+        "name": "Folder Note.md",
+        "stat": {
+          "ctime": 1625997387695,
+          "mtime": 1625997387696,
+          "size": 16
+        },
+        "basename": "Folder Note",
+        "extension": "md",
+        "parent": {
+          "path": "Folder",
+          "name": "Folder",
+          "parent": {
+            "path": "/",
+            "name": "",
+            "parent": null
+          }
+        }
+      },
+      "Links": {
+        "path": "Links.md",
+        "name": "Links.md",
+        "stat": {
+          "ctime": 1625997387696,
+          "mtime": 1625997387697,
+          "size": 381
+        },
+        "basename": "Links",
+        "extension": "md",
+        "parent": {
+          "path": "/",
+          "name": "",
+          "parent": null
+        }
+      },
+      "Child Folder Note": {
+        "path": "Folder/Child Folder/Child Folder Note.md",
+        "name": "Child Folder Note.md",
+        "stat": {
+          "ctime": 1625997387695,
+          "mtime": 1625997387695,
+          "size": 29
+        },
+        "basename": "Child Folder Note",
+        "extension": "md",
+        "parent": {
+          "path": "Folder/Child Folder",
+          "name": "Child Folder",
+          "parent": {
+            "path": "Folder",
+            "name": "Folder",
+            "parent": {
+              "path": "/",
+              "name": "",
+              "parent": null
+            }
+          }
+        }
+      },
+      "obsidian-logo.png": {
+        "path": "obsidian-logo.png",
+        "name": "obsidian-logo.png",
+        "stat": {
+          "ctime": 1625997387698,
+          "mtime": 1625997387699,
+          "size": 7848
+        },
+        "basename": "obsidian-logo",
+        "extension": "png",
+        "parent": {
+          "path": "/",
+          "name": "",
+          "parent": null
+        }
+      }
+    },
+    "Headings.md": {},
+    "Frontmatter.md": {},
+    "Folder/Folder Note.md": {},
+    "Folder/Child Folder/Child Folder Note.md": {},
+    "Embeds.md": {}
   }
 }
